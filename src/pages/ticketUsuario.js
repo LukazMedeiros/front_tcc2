@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import Aside from "../components/aside";
 import Invalida from "./invalida";
 import {} from "react-icons/fa";
@@ -13,12 +13,12 @@ export default function TicketUsuario() {
   const [titulo, setTtitulo] = useState("");
   const [descricao, setDescricao] = useState("");
 
-  function cancelar(e: FormEvent) {
+  function cancelar(e) {
     e.preventDefault();
     history.push("/inicial");
   }
 
-  async function Salvar(e: FormEvent) {
+  async function Salvar(e) {
     e.preventDefault();
     const dados = { titulo, descricao };
     console.log(titulo);
