@@ -1,0 +1,40 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#alteraadm {
+  display: flex;
+  width: 100%;
+}
+
+#alteraadm .main {
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 40%;
+}
+
+#alteraadm form {
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+@media screen and (max-width: 640px) {
+  #alteraadm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #alteraadm form {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  #alteraadm .main {
+    width: 100%;
+    height: 100%;
+  }
+}
