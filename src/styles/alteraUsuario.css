@@ -1,0 +1,40 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#alterausuario {
+  display: flex;
+  width: 100%;
+}
+
+#alterausuario .main {
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 40%;
+}
+
+#alterausuario form {
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+@media screen and (max-width: 640px) {
+  #alterausuario {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #alterausuario form {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  #alterausuario .main {
+    width: 100%;
+    height: 100%;
+  }
+}

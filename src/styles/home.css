@@ -1,0 +1,27 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primariaEscura);
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home .form {
+  padding: 3rem;
+  max-width: 500px;
+  border-radius: 0.8rem;
+  border: 1px solid var(--bordas);
+  background-color: var(--corPrimaria);
+}
+
+@media screen and (max-width: 640px) {
+  #home {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,70 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#inicialadm {
+  display: flex;
+  width: 100%;
+}
+
+#inicialadm .main {
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+#inicialadm .card {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+#inicialadm .card button {
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+#inicialadm .card button:hover,
+#inicialadm .card a {
+  color: var(--icone);
+  transition: all 0.3s ease;
+}
+
+#inicialadm .card button:hover,
+#inicialadm .card a:hover {
+  color: var(--destaque);
+}
+
+#inicialadm .form-group {
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+@media screen and (max-width: 640px) {
+  #inicialadm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #inicialadm form,
+  #inicialadm .card {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  #inicialadm .card {
+    margin-top: 1.2rem;
+  }
+
+  #inicialadm .main {
+    width: 100%;
+    height: 100%;
+  }
+}

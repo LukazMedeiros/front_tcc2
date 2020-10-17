@@ -1,0 +1,70 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#inicial {
+  display: flex;
+  width: 100%;
+}
+
+#inicial .main {
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+#inicial .card {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+#inicial .card button {
+  background: none;
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+#inicial .card button:hover,
+#inicial .card a {
+  color: var(--icone);
+  transition: all 0.3s ease;
+}
+
+#inicial .card button:hover,
+#inicial .card a:hover {
+  color: var(--destaque);
+}
+
+#inicial .form-group {
+  padding: 1rem;
+  background: var(--corPrimaria);
+  border-radius: 0.5rem;
+  border: var(--borda);
+}
+
+@media screen and (max-width: 640px) {
+  #inicial {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #inicial form,
+  #inicial .card {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  #inicial .card {
+    margin-top: 1.2rem;
+  }
+
+  #inicial .main {
+    width: 100%;
+    height: 100%;
+  }
+}
