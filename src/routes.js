@@ -8,7 +8,7 @@ import InicialAdm from "./pages/inicialAdm";
 import TicketAdm from "./pages/ticketAdm";
 import AlteraAdm from "./pages/alteraAdm";
 import AlteraUsuario from "./pages/alteraUsuario";
-import TicketUsuarios from "./pages/ticketUsuarios";
+import TicketUsuario from "./pages/ticketUsuario";
 
 export default function Rota() {
   return (
@@ -20,7 +20,7 @@ export default function Rota() {
         <Route path="/ticketAdm" exact component={TicketAdm} />
         <Route path="/AlteraAdm" exact component={AlteraAdm} />
         <Route path="/alteraUsuario" exact component={AlteraUsuario} />
-        <Route path="/ticketUsuarios" exact component={TicketUsuarios} />
+        <Route path="/ticketUsuario" exact component={TicketUsuario} />
       </Switch>
     </BrowserRouter>
   );

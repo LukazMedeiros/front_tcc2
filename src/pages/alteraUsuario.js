@@ -33,9 +33,18 @@ export default function AlteraUsuario() {
       const cadastrada = await api.get("usuario", {
         headers: { usuario: usuario },
       });
-      console.log(cadastrada);
-      if (cadastrada.data !== segredo) {
+      if (cadastrada.data[0].senha !== segredo) {
         alert(`senha atual incorreta`);
+      } else if (nova !== confirmacao) {
+        alert(`O campo senha e de confirmação devem ser iguais`);
+      } else {
+        const resposta = await api.put("/usuario", dados, {
+          headers: { usuario: usuario },
+        });
+        alert(`${resposta.data.mensagem}`);
+        sessionStorage.clear();
+        localStorage.clear();
+        history.push("/");
       }
     } catch (error) {
       alert(`Erro ao validar`);
