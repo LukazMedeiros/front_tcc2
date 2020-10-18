@@ -7,7 +7,7 @@ export default function Aside() {
 
   function novo(e) {
     e.preventDefault();
-    history.push("/ticketusuarios");
+    history.push("/ticketusuario");
   }
 
   function alterar(e) {

@@ -12,6 +12,7 @@ export default function AlteraUsuario() {
   const usuario = sessionStorage.getItem("ra");
   const nome = sessionStorage.getItem("nome");
   const cpf = sessionStorage.getItem("cpf");
+  const acesso = sessionStorage.getItem("tipo");
   const tipo = sessionStorage.getItem("tipo");
   const [atual, setAtual] = useState("");
   const [nova, setNova] = useState("");
@@ -51,7 +52,7 @@ export default function AlteraUsuario() {
     }
   }
 
-  if (usuario === "" || !usuario || tipo !== "comum") {
+  if (usuario === "" || !usuario || acesso !== "comum") {
     return <Invalida />;
   }
   return (

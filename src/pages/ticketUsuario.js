@@ -9,7 +9,7 @@ import api from "../services/axios";
 export default function TicketUsuario() {
   const history = useHistory();
   const usuario = sessionStorage.getItem("ra");
-  const tipo = sessionStorage.getItem("tipo");
+  const acesso = sessionStorage.getItem("tipo");
   const [titulo, setTtitulo] = useState("");
   const [descricao, setDescricao] = useState("");
 
@@ -39,7 +39,7 @@ export default function TicketUsuario() {
     }
   }
 
-  if (usuario === "" || !usuario || tipo !== "comum") {
+  if (usuario === "" || !usuario || acesso !== "comum") {
     return <Invalida />;
   }
   return (
