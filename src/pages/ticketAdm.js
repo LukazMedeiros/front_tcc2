@@ -33,6 +33,7 @@ export default function TicketAdm() {
       headers: { responsavel: nome },
     });
     alert(`${resposta.data.mensagem}`);
+    history.push('/InicialAdm')
   }
 
   if (usuario === "" || !usuario || acesso !== "administrador") {

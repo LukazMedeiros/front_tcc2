@@ -10,6 +10,13 @@ export default function Aside() {
     history.push("/AlteraAdm");
   }
 
+  function logout(e) {
+    e.preventDefault();
+    sessionStorage.clear();
+    localStorage.clear();
+    history.push("/");
+  }
+
   return (
     <div className="aside">
       <div className="logotipo">
@@ -20,6 +27,9 @@ export default function Aside() {
       </div>
       <div className="col-g12 col-m12 col-p12">
         <button onClick={alterar}>Alterar Dados</button>
+      </div>
+      <div className="col-g12 col-m12 col-p12">
+        <button onClick={logout}>Logout</button>
       </div>
     </div>
   );
