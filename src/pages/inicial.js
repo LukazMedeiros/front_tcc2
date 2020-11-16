@@ -57,7 +57,8 @@ export default function Inicial() {
                   selecione
                 </option>
                 <option value="aberto">Abertos</option>
-                <option value="solucionado">Solucionado</option>
+              <option value="solucionado">Solucionados</option>
+              <option value="pendente">Pendentes</option>
               </select>
             </div>
             <div className="col-g4 col-m4 col-p12">

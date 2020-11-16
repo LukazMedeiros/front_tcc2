@@ -5,7 +5,6 @@ import Invalida from "./invalida";
 import {} from "react-icons/fa";
 import "../styles/ticketAdm.css";
 import api from "../services/axios";
-import { render } from "@testing-library/react";
 
 export default function TicketAdm() {
   const history = useHistory();
@@ -15,6 +14,7 @@ export default function TicketAdm() {
   const id = localStorage.getItem("ticket");
   const [chamado, setChamado] = useState([]);
   const [resolucao, setResolucao] = useState("");
+  const [status, setStatus] = useState("aberto");
 
   useEffect(() => {
     api.get(`/ticket/${id}`).then((resposta) => setChamado(resposta.data));
@@ -28,12 +28,12 @@ export default function TicketAdm() {
 
   async function encerrar(e) {
     e.preventDefault();
-    const dados = { resolucao };
+    const dados = { resolucao, status };
     const resposta = await api.put(`/adm/${id}`, dados, {
       headers: { responsavel: nome },
     });
     alert(`${resposta.data.mensagem}`);
-    history.push('/InicialAdm')
+    history.push("/InicialAdm");
   }
 
   if (usuario === "" || !usuario || acesso !== "administrador") {
@@ -64,6 +64,13 @@ export default function TicketAdm() {
                 </li>
               </ul>
             ))}
+
+            <select value={status} onChange={(e) => setStatus(e.target.value)}>
+              <option value="aberto">Aberto</option>
+              <option value="solucionado">Solucionado</option>
+              <option value="pendente">Pendente</option>
+            </select>
+
             <label htmlFor="">Resolução</label>
             <textarea
               value={resolucao}
