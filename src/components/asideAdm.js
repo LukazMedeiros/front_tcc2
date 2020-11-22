@@ -4,6 +4,7 @@ import "../styles/aside.css";
 
 export default function Aside() {
   const history = useHistory();
+  const usuario = sessionStorage.getItem("nome");
 
   function alterar(e) {
     e.preventDefault();
@@ -23,7 +24,7 @@ export default function Aside() {
         <p>logotipo</p>
       </div>
       <div className="col-g12 col-m12 col-p12">
-        <p>Bem vindo usuario</p>
+        <p>Bem vindo {usuario}</p>
       </div>
       <div className="col-g12 col-m12 col-p12">
         <button onClick={alterar}>Alterar Dados</button>
