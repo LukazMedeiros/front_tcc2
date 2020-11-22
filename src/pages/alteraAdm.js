@@ -114,11 +114,13 @@ export default function AlteraAdm() {
           </div>
           <div className="form-group">
             <label htmlFor="">Tipo</label>
-            <input
-              type="text"
-              value={tipo}
-              onChange={(e) => setTipo(e.target.value)}
-            />
+            <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
+              <option value="" disabled>
+                Selecione
+              </option>
+              <option value="administrador">Administrador</option>
+              <option value="comum">Comum</option>
+            </select>
           </div>
           <div className="form-group">
             <div className="col-g6 col-m6 col-p12">
